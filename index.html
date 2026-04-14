@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Косяк года</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Номинация "Косяк года"</h1>
+    <p class="scroll">Победитель — Валетдинов Бобрест</p>
+</header>
+
+<main>
+
+    <h2 class="scroll">Биография</h2>
+    <p class="scroll">Валетдинов Бобрест - ученик 6 класа Лицея №161 г. Уфа</p>
+    <p class="scroll">Начал заниматься своей деятельностью, а именно <i> Распиздяйством </i> с момента рождения (2013г).</p>	
+
+    <h2 class="scroll">Навыки</h2>
+    <ul class="scroll">
+        <li>Все, что попадает в руки - ломается</li>
+        <li>Рекорд по обрыву снастей для рыбалки - 17 штук за 10 минут</li>
+        <li>В доме есть лишний алкоголь? Бобрест употребит его в одиночку за 15 минут!</li>
+    </ul>
+
+    <h2 class="scroll">Фотографии</h2>
+
+    <div class="gallery scroll">
+        <img src="img/photo1.jpg" onclick="openImg(this.src)">
+        <img src="img/photo2.jpg" onclick="openImg(this.src)">
+        <img src="img/photo3.jpg" onclick="openImg(this.src)">
+        <img src="img/photo4.jpg" onclick="openImg(this.src)">
+        <img src="img/photo5.jpg" onclick="openImg(this.src)">
+    </div>
+
+    <h2 class="scroll">Социальные сети</h2>
+
+    <div class="socials scroll">
+
+
+        <a href="https://www.tiktok.com/@dabert42?_r=1&_t=ZS-95X1Qb7oSxQ" target="_blank" class="social tiktok">
+            TikTok
+        </a>
+
+        <a href="https://t.me/Ernesteru" target="_blank" class="social telegram">
+            Telegram
+        </a>
+
+    </div>
+
+</main>
+
+<footer>
+    © 2026
+    
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeImg()">
+    <img id="bigImg">
+</div>
+
+<script>
+function openImg(src){
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("bigImg").src = src;
+}
+
+function closeImg(){
+    document.getElementById("lightbox").style.display = "none";
+}
+
+/* scroll animation */
+const items = document.querySelectorAll(".scroll");
+
+function checkScroll(){
+    const trigger = window.innerHeight * 0.85;
+
+    items.forEach(el => {
+        if(el.getBoundingClientRect().top < trigger){
+            el.classList.add("show");
+        }
+    });
+}
+
+window.addEventListener("scroll", checkScroll);
+checkScroll();
+</script>
+
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
